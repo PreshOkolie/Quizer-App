@@ -1,8 +1,7 @@
 body{
-    /* background-image: linear-gradient(30deg #150080 0.03%, #d08642); */
+    
     background-color: rgb(205, 201, 201);
-    /* background-color: rgb(238, 137, 137); */
-    /* min-height: 800vh; */
+    /* background-color: red; */
 }
 *{
     font-family: Verdana, Geneva, Tahoma, sans-serif;

@@ -17,3 +17,4 @@ export const Score = () => {
    
   )
 }
+// export default Score

@@ -1,4 +1,4 @@
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 export const Quizarea = () => {
@@ -171,3 +171,5 @@ export const Quizarea = () => {
     </div>
   )
 }
+
+export default Quizarea
