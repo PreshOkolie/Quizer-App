@@ -97,7 +97,26 @@ export const Quizarea = () => {
     },
   ]
 
-  const 
+  const [newQuestion,setNewQuestion] = useState(0);
+  const [score,setScore] = useState(0);
+  const [showScore, setShowScore] = useState(false);
+
+  const handleAnswerResponse = (isCorrect) =>{
+    if(isCorrect)
+    {
+      setScore(score+1);
+    }
+
+    const nextQuestion = newQuestion+1;
+    if(nextQuestion<Quizquestions.length)
+    {
+      setNewQuestion(nextQuestion);
+    }else{
+      setShowScore(true);
+    }
+  }
+
+  console.log(Quizquestions);
 
   const resetQuiz = () =>
   {
@@ -122,6 +141,31 @@ export const Quizarea = () => {
         </>
       </div>
 
+    )
+    //for questions
+    :(
+      <>
+      <div className="questions">
+          <div className="question-count">
+            <span>{newQuestion+1}</span>/{Quizquestions.length}
+          </div>
+
+          <div className="question-text">
+            {Quizquestions[newQuestion].Question}
+          </div>
+      </div>
+
+
+        {/* //for answers */}
+
+      <div className="answers">
+        {Quizquestions[newQuestion].QuizAnswer.map((answer)=>
+        (
+          <button onClick={() => handleAnswerResponse(answer.isCorrect)}>{answer.Answer}</button>
+        ))}
+
+      </div>
+      </>
     )
   }
     </div>
