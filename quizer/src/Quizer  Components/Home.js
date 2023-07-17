@@ -5,7 +5,7 @@ export const Home = () => {
   return (
     <>
       <div className="welcome">
-    <h1>WELCOME TO QUIZZER</h1>
+    <h1>WELCOME TO QUIZER</h1>
     <button onClick={() => navigate ('Quizarea')}>Start Quiz</button>
       </div>
     </>

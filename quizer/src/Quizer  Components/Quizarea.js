@@ -135,9 +135,9 @@ export const Quizarea = () => {
       <div className="scores">
         You have scored {score} out of {Quizquestions.length}
         <>
-        <button type = 'submit' onClick={resetQuiz}>Play Again</button>
+        <button id="play-again" type = 'submit' onClick={resetQuiz}>Play Again</button>
 
-        <button onClick={() => navigate('/Score')}>End Quiz</button>
+        <button id="end-quiz" onClick={() => navigate('/Score')}>End Quiz</button>
         </>
       </div>
 
